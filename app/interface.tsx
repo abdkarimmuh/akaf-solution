@@ -38,6 +38,7 @@ export interface Project {
 export interface About {
   title: string;
   subtitle: string;
+  acronym: string[];
   description: string;
   body: string[];
   contact: ContactInfo;

@@ -65,6 +65,7 @@ export default function TeamPortfolio() {
         <HeroSection
           title="We are"
           highlight={about?.title ?? ""}
+          acronym={about?.acronym ?? []}
           description={about?.description ?? ""}
           primaryAction={{
             href: "#contact",

@@ -1,6 +1,12 @@
 {
-    "title":"AKAF",
-    "subtitle":"Accelerating Konnectivity Across Frontiers",
+    "title": "AKAF",
+    "subtitle": "Accelerating Konnectivity Across Frontiers",
+    "acronym": [
+        "Accelerating",
+        "Konnectivity",
+        "Across",
+        "Frontiers"
+    ],
     "description": "A dynamic team of software engineers building exceptional digital experiences.",
     "body": [
         "We are a passionate duo of software engineers with complementary skills and a shared vision for creating impactful digital solutions. With our combined expertise, we tackle complex challenges and deliver high-quality products that exceed expectations.",

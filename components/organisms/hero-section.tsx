@@ -1,36 +1,36 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { ProfileImage } from "@/components/atoms/profile-image"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ProfileImage } from "@/components/atoms/profile-image";
 
 interface HeroSectionProps {
-  title: string
-  highlight: string
-  description: string
+  title: string;
+  acronym: string[];
+  highlight: string;
+  description: string;
   primaryAction: {
-    href: string
-    label: string
-  }
+    href: string;
+    label: string;
+  };
   secondaryAction: {
-    href: string
-    label: string
-  }
-  teamImages: string[]
+    href: string;
+    label: string;
+  };
+  teamImages: string[];
 }
 
 export function HeroSection({
   title,
+  acronym,
   highlight,
   description,
   primaryAction,
   secondaryAction,
   teamImages,
 }: HeroSectionProps) {
-  const acronym = ["Accelerating", "Konnectivity", "Across", "Frontiers"]
-
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Background elements */}
@@ -46,7 +46,11 @@ export function HeroSection({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
               <h1 className="font-heading heading-xl mb-4">
                 {title}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
@@ -66,7 +70,9 @@ export function HeroSection({
                     <span className="w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-3">
                       {word.charAt(0)}
                     </span>
-                    <span className="text-lg text-muted-foreground">{word}</span>
+                    <span className="text-lg text-muted-foreground">
+                      {word}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -89,10 +95,16 @@ export function HeroSection({
             >
               <Button size="lg" className="rounded-full shadow-lg" asChild>
                 <Link href={primaryAction.href}>
-                  {primaryAction.label} <ChevronRight className="ml-2 h-4 w-4" />
+                  {primaryAction.label}{" "}
+                  <ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full" asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full"
+                asChild
+              >
                 <Link href={secondaryAction.href}>{secondaryAction.label}</Link>
               </Button>
             </motion.div>
@@ -132,5 +144,5 @@ export function HeroSection({
         </div>
       </div>
     </section>
-  )
+  );
 }
