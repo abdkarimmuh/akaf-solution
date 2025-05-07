@@ -1,0 +1,58 @@
+[
+    {
+        "title": "E-Commerce Platform",
+        "description": "Full-stack online shopping application",
+        "content": "Built a complete e-commerce solution with user authentication, product catalog, shopping cart, and payment processing. Alex handled the frontend and user experience, while Jordan developed the backend systems and database architecture.",
+        "image": "/placeholder.svg?height=200&width=400",
+        "technologies": [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Stripe"
+        ],
+        "githubUrl": "https://github.com/akaf/ecommerce",
+        "demoUrl": "https://ecommerce-demo.example.com"
+    },
+    {
+        "title": "Task Management App",
+        "description": "Collaborative project management tool",
+        "content": "Developed a task management application with real-time updates, team collaboration features, and customizable workflows. Jordan built the real-time backend infrastructure while Alex created an intuitive and responsive interface.",
+        "image": "/placeholder.svg?height=200&width=400",
+        "technologies": [
+            "Next.js",
+            "TypeScript",
+            "PostgreSQL",
+            "Socket.io"
+        ],
+        "githubUrl": "https://github.com/akaf/taskmanager",
+        "demoUrl": "https://taskmanager-demo.example.com"
+    },
+    {
+        "title": "AI Content Generator",
+        "description": "Machine learning powered content creation tool",
+        "content": "Created an AI-powered application that generates marketing content, blog posts, and social media captions. Jordan implemented the AI backend and API, while Alex designed the user interface and content editing experience.",
+        "image": "/placeholder.svg?height=200&width=400",
+        "technologies": [
+            "Python",
+            "React",
+            "TensorFlow",
+            "FastAPI"
+        ],
+        "githubUrl": "https://github.com/akaf/ai-content",
+        "demoUrl": "https://ai-content-demo.example.com"
+    },
+    {
+        "title": "Health Tracking Dashboard",
+        "description": "Personal health analytics platform",
+        "content": "Built a comprehensive health tracking application with data visualization, goal setting, and progress tracking. Alex created the dashboard and data visualization components, while Jordan developed the data processing and analytics backend.",
+        "image": "/placeholder.svg?height=200&width=400",
+        "technologies": [
+            "Vue.js",
+            "Express",
+            "D3.js",
+            "Firebase"
+        ],
+        "githubUrl": "https://github.com/akaf/health-tracker",
+        "demoUrl": "https://health-tracker-demo.example.com"
+    }
+]

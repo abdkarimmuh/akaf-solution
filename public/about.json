@@ -1,0 +1,18 @@
+{
+    "title":"AKAF",
+    "subtitle":"Accelerating Konnectivity Across Frontiers",
+    "description": "A dynamic team of software engineers building exceptional digital experiences.",
+    "body": [
+        "We are a passionate duo of software engineers with complementary skills and a shared vision for creating impactful digital solutions. With our combined expertise, we tackle complex challenges and deliver high-quality products that exceed expectations.",
+        "Our collaborative approach allows us to leverage our individual strengths while maintaining a unified focus on technical excellence, user experience, and business goals. We believe in writing clean, maintainable code and implementing best practices in software development."
+    ],
+    "contact": {
+        "github_url": "https://github.com/akaf",
+        "linkedin_url": "https://linkedin.com/company/akaf",
+        "address": "San Francisco, CA",
+        "email": "contact@akaf.com"
+    },
+    "mission": [
+        "To accelerate digital transformation by creating innovative solutions that connect people, systems, and ideas across technological frontiers. We're committed to building software that's not just functional, but transformative."
+    ]
+}
