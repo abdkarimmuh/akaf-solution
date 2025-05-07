@@ -1,44 +1,58 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Github, Linkedin, Menu, X, Moon, Sun } from "lucide-react"
-import { SocialLink } from "@/components/atoms/social-link"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { Button } from "@/components/ui/button"
-import { useTheme } from "next-themes"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Menu, X, Moon, Sun } from "lucide-react";
+import { SocialLink } from "@/components/atoms/social-link";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 
 interface NavItem {
-  href: string
-  label: string
+  href: string;
+  label: string;
 }
 
 interface SiteHeaderProps {
-  title: string
-  navItems: NavItem[]
-  githubUrl: string
-  linkedinUrl: string
+  title: string;
+  subTitle: string;
+  navItems: NavItem[];
+  githubUrl: string;
+  linkedinUrl: string;
 }
 
-export function SiteHeader({ title, navItems, githubUrl, linkedinUrl }: SiteHeaderProps) {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+export function SiteHeader({
+  title,
+  subTitle,
+  navItems,
+  githubUrl,
+  linkedinUrl,
+}: SiteHeaderProps) {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
-    }
+      setScrolled(window.scrollY > 10);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-md border-b shadow-sm" : "bg-transparent"
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-b shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="container flex h-20 items-center justify-between">
@@ -53,15 +67,14 @@ export function SiteHeader({ title, navItems, githubUrl, linkedinUrl }: SiteHead
               <Tooltip>
                 <TooltipTrigger asChild>
                   <div className="h-10 px-3 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-lg shadow-md">
-                    AKAF
+                    {title}
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="font-medium">
-                  <p>Accelerating Konnectivity Across Frontiers</p>
+                  <p>{subTitle}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-            <span className="hidden sm:inline">{title}</span>
           </Link>
         </motion.div>
 
@@ -134,8 +147,8 @@ export function SiteHeader({ title, navItems, githubUrl, linkedinUrl }: SiteHead
         >
           <div className="container py-6 flex flex-col space-y-5">
             <div className="p-4 mb-2 glass-card rounded-lg">
-              <h3 className="text-sm font-bold mb-1 text-primary">AKAF</h3>
-              <p className="text-xs">Accelerating Konnectivity Across Frontiers</p>
+              <h3 className="text-sm font-bold mb-1 text-primary">{title}</h3>
+              <p className="text-xs">{subTitle}</p>
             </div>
             {navItems.map((item) => (
               <Link
@@ -155,5 +168,5 @@ export function SiteHeader({ title, navItems, githubUrl, linkedinUrl }: SiteHead
         </motion.div>
       )}
     </header>
-  )
+  );
 }

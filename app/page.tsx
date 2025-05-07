@@ -55,6 +55,7 @@ export default function TeamPortfolio() {
     <div className="min-h-screen bg-background">
       <SiteHeader
         title={about?.title ?? ""}
+        subTitle={about?.subtitle ?? ""}
         navItems={navItems}
         githubUrl={about?.contact.github_url ?? ""}
         linkedinUrl={about?.contact.linkedin_url ?? ""}
@@ -160,10 +161,13 @@ export default function TeamPortfolio() {
       </main>
 
       <SiteFooter
-        companyName={about?.title ?? ""}
+        title={about?.title ?? ""}
+        subTitle={about?.subtitle ?? ""}
+        description={about?.description ?? ""}
         githubUrl={about?.contact.github_url ?? ""}
         linkedinUrl={about?.contact.linkedin_url ?? ""}
         email={about?.contact.email ?? ""}
+        address={about?.contact.address ?? ""}
       />
     </div>
   );

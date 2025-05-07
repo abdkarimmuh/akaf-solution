@@ -1,23 +1,27 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import type { LucideIcon } from "lucide-react"
-import { SkillCard } from "./skill-card"
+import { motion } from "framer-motion";
+import type { LucideIcon } from "lucide-react";
+import { SkillCard } from "./skill-card";
 
 interface Skill {
-  icon: LucideIcon
-  name: string
-  level: number
-  description: string
+  icon: LucideIcon;
+  name: string;
+  level: number;
+  description: string;
 }
 
 interface SkillCategoryProps {
-  title: string
-  icon: LucideIcon
-  skills: Skill[]
+  title: string;
+  icon: LucideIcon;
+  skills: Skill[];
 }
 
-export function SkillCategory({ title, icon: Icon, skills }: SkillCategoryProps) {
+export function SkillCategory({
+  title,
+  icon: Icon,
+  skills,
+}: SkillCategoryProps) {
   return (
     <div className="space-y-4">
       <motion.div
@@ -38,13 +42,13 @@ export function SkillCategory({ title, icon: Icon, skills }: SkillCategoryProps)
         {skills.map((skill) => (
           <SkillCard
             key={skill.name}
-            icon={skill.icon}
             name={skill.name}
+            icon={skill.icon}
             level={skill.level}
             description={skill.description}
           />
         ))}
       </div>
     </div>
-  )
+  );
 }
